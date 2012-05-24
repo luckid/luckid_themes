@@ -1,10 +1,6 @@
 <?php
 /**
  * The template for displaying Tag Archive pages.
- *
- * @package WordPress
- * @subpackage Twenty_Ten
- * @since Twenty Ten 1.0
  */
 
 get_header(); ?>
@@ -13,7 +9,7 @@ get_header(); ?>
 			<div id="content" role="main">
 
 				<h1 class="page-title"><?php
-					printf( __( 'Tag Archives: %s', 'twentyten' ), '<span>' . single_tag_title( '', false ) . '</span>' );
+					printf( __( 'Tag Archives: %s', 'luckid' ), '<span>' . single_tag_title( '', false ) . '</span>' );
 				?></h1>
 
 <?php if ( have_posts() ) : ?>
@@ -49,9 +45,9 @@ get_header(); ?>
 				<?php endwhile; ?>
 <?php else : ?>
 				<div id="post-0" class="post no-results not-found">
-					<h2 class="entry-title"><?php _e( 'Nothing Found', 'twentyten' ); ?></h2>
+					<h2 class="entry-title"><?php _e( 'Nothing Found', 'luckid' ); ?></h2>
 					<div class="entry-content">
-						<p><?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'twentyten' ); ?></p>
+						<p><?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'luckid' ); ?></p>
 						<?php get_search_form(); ?>
 					</div><!-- .entry-content -->
 								<div class="wptagcloud">
