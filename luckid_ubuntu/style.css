@@ -1,4 +1,17 @@
 /*
+Theme Name: luckid ubuntu
+Theme URI: http://www.luckid.com/
+Author: luckid
+Author URI: http://www.luckid.com/
+Description: The 2012 theme for WordPress is sophisticated, lightweight, and adaptable. Looks like ubuntu planet(planet.ubuntu.com).
+Version: 1.0
+License: GNU General Public License
+License URI: license.txt
+Tags: ubuntu, planet, one-column, two-columns, left-sidebar, right-sidebar, fixed-width, flexible-width, custom-background, custom-colors, custom-header, custom-menu, editor-style, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
+*/
+
+
+/*
 html {
 	line-height: 1;
 	background:url(http://planet.ubuntu.com/images/dotted-bg.png) repeat;
@@ -133,17 +146,17 @@ position: relative;
 
 #header #orangeHeader
 {
-	height: 72px;
-	background: #d05630 url('./orangeheader-tile.png') repeat-x top left;
-  -moz-border-radius: 0 0 4px 4px;
-  -webkit-border-bottom-right-radius: 4px;
-  -webkit-border-bottom-left-radius: 4px;
-  border-radius: 0 0 4px 4px;
+height: 72px;
+background: #d05630 url('./orangeheader-tile.png') repeat-x top left;
+-moz-border-radius: 0 0 4px 4px;
+-webkit-border-bottom-right-radius: 4px;
+-webkit-border-bottom-left-radius: 4px;
+border-radius: 0 0 4px 4px;
 }
 
 #header #orangeHeader h1
 {
-	margin: 0;
+margin: 0;
 }
 /* 	background: url('./ubuntu-planet.png') no-repeat center center; */
 #header #orangeHeader a
@@ -427,10 +440,9 @@ position: relative;
 #footer
 {
 
-
-
+	text-align:center;
 	color: #aea79f;
-	padding: 56px 16px 16px 16px;
+	padding: 56px 16px 36px 16px;
 	margin:0px auto 0 auto;
 	background: white;
 

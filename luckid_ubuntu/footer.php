@@ -17,10 +17,11 @@
 	get_sidebar( 'footer' );
 ?>
 
-			<div id="site-info">
-				&copy; 2008 - <?php echo date('Y'); ?>  <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name' ) ?>" ><?php bloginfo( 'name' ) ?> </a> 
-				<p>Theme design by: <strong>Ubuntu Planet</strong> | Imitation by <a href="http://www.luckid.com/" title="幸运小子">幸运小子</a>
-			</div><!-- #site-info -->
+	    <div id="site-info">
+	    &copy; <?php echo date('Y'); ?>  <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name' ) ?>" ><?php bloginfo( 'name' ) ?> </a> All rights reserved<br />
+	    Proudly powered by <a href="http://www.wordpress.org" title="wordpress">WordPress</a><br />
+	    Theme by <a href="http://www.luckid.com/" title="幸运小子">luckid</a><br />
+	    </div><!-- #site-info -->
 
 
 		</div><!-- #colophon -->
