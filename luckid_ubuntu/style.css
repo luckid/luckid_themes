@@ -361,7 +361,7 @@ margin: 0;
 	margin-left: 10px;
 }
 .widget_search #s {/* This keeps the search inputs in line */
-	width: 70%;
+	width: 60%;
 	margin-left:10px;
 }
 .widget_search label {
