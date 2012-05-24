@@ -140,10 +140,6 @@ endif;
 if ( ! function_exists( 'luckid_admin_header_style' ) ) :
 /**
  * Styles the header image displayed on the Appearance > Header admin panel.
- *
- * Referenced via add_custom_image_header() in luckid_setup().
- *
- * @since Twenty Ten 1.0
  */
 function luckid_admin_header_style() {
 ?>
@@ -164,11 +160,6 @@ endif;
 
 /**
  * Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.
- *
- * To override this in a child theme, remove the filter and optionally add
- * your own function tied to the wp_page_menu_args filter hook.
- *
- * @since Twenty Ten 1.0
  */
 function luckid_page_menu_args( $args ) {
 	$args['show_home'] = true;
@@ -178,12 +169,6 @@ add_filter( 'wp_page_menu_args', 'luckid_page_menu_args' );
 
 /**
  * Sets the post excerpt length to 40 characters.
- *
- * To override this length in a child theme, remove the filter and add your own
- * function tied to the excerpt_length filter hook.
- *
- * @since Twenty Ten 1.0
- * @return int
  */
 function luckid_excerpt_length( $length ) {
 	return 40;
@@ -192,9 +177,6 @@ add_filter( 'excerpt_length', 'luckid_excerpt_length' );
 
 /**
  * Returns a "Continue Reading" link for excerpts
- *
- * @since Twenty Ten 1.0
- * @return string "Continue Reading" link
  */
 function luckid_continue_reading_link() {
 	return ' <a href="'. get_permalink() . '">' . __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'luckid' ) . '</a>';
@@ -202,12 +184,6 @@ function luckid_continue_reading_link() {
 
 /**
  * Replaces "[...]" (appended to automatically generated excerpts) with an ellipsis and luckid_continue_reading_link().
- *
- * To override this in a child theme, remove the filter and add your own
- * function tied to the excerpt_more filter hook.
- *
- * @since Twenty Ten 1.0
- * @return string An ellipsis
  */
 function luckid_auto_excerpt_more( $more ) {
 	return ' &hellip;' . luckid_continue_reading_link();
@@ -216,12 +192,6 @@ add_filter( 'excerpt_more', 'luckid_auto_excerpt_more' );
 
 /**
  * Adds a pretty "Continue Reading" link to custom post excerpts.
- *
- * To override this link in a child theme, remove the filter and add your own
- * function tied to the get_the_excerpt filter hook.
- *
- * @since Twenty Ten 1.0
- * @return string Excerpt with a pretty "Continue Reading" link
  */
 function luckid_custom_excerpt_more( $output ) {
 	if ( has_excerpt() && ! is_attachment() ) {
@@ -233,11 +203,6 @@ add_filter( 'get_the_excerpt', 'luckid_custom_excerpt_more' );
 
 /**
  * Remove inline styles printed when the gallery shortcode is used.
- *
- * Galleries are styled by the theme in Twenty Ten's style.css.
- *
- * @since Twenty Ten 1.0
- * @return string The gallery style filter, with the styles themselves removed.
  */
 function luckid_remove_gallery_css( $css ) {
 	return preg_replace( "#<style type='text/css'>(.*?)</style>#s", '', $css );
@@ -247,13 +212,6 @@ add_filter( 'gallery_style', 'luckid_remove_gallery_css' );
 if ( ! function_exists( 'luckid_comment' ) ) :
 /**
  * Template for comments and pingbacks.
- *
- * To override this walker in a child theme without modifying the comments template
- * simply create your own luckid_comment(), and that function will be used instead.
- *
- * Used as a callback by wp_list_comments() for displaying the comments.
- *
- * @since Twenty Ten 1.0
  */
 function luckid_comment( $comment, $args, $depth ) {
 	$GLOBALS['comment'] = $comment;
@@ -300,12 +258,6 @@ endif;
 
 /**
  * Register widgetized areas, including two sidebars and four widget-ready columns in the footer.
- *
- * To override luckid_widgets_init() in a child theme, remove the action hook and add your own
- * function tied to the init hook.
- *
- * @since Twenty Ten 1.0
- * @uses register_sidebar
  */
 function luckid_widgets_init() {
 	// Area 1, located at the top of the sidebar.
@@ -379,11 +331,6 @@ add_action( 'widgets_init', 'luckid_widgets_init' );
 
 /**
  * Removes the default styles that are packaged with the Recent Comments widget.
- *
- * To override this in a child theme, remove the filter and optionally add your own
- * function tied to the widgets_init action hook.
- *
- * @since Twenty Ten 1.0
  */
 function luckid_remove_recent_comments_style() {
 	global $wp_widget_factory;
@@ -394,8 +341,6 @@ add_action( 'widgets_init', 'luckid_remove_recent_comments_style' );
 if ( ! function_exists( 'luckid_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post—date/time and author.
- *
- * @since Twenty Ten 1.0
  */
 function luckid_posted_on() {
 	printf( __( '<span class="%1$s">Posted on</span> %2$s <span class="meta-sep">by</span> %3$s', 'luckid' ),
@@ -417,8 +362,6 @@ endif;
 if ( ! function_exists( 'luckid_posted_in' ) ) :
 /**
  * Prints HTML with meta information for the current post (category, tags and permalink).
- *
- * @since Twenty Ten 1.0
  */
 function luckid_posted_in() {
 	// Retrieves tag list of current post, separated by commas.
