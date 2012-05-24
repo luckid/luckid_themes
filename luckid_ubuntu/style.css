@@ -783,7 +783,7 @@ a img.aligncenter {
     padding:0 4px 5px;
 }
 
-
+/* wp-pagenavi CSS */
 .wp-pagenavi{
 display: block;
 padding-bottom:10px;
@@ -795,16 +795,17 @@ text-align: center;
 	border: 1px solid #BFBFBF;
 	padding: 3px 5px;
 	margin: 2px;
-	color: #000;
+	color: #dd4814;
 }
 
 .wp-pagenavi a:hover, .wp-pagenavi span.current {
-	border-color: #000;
+	border-color: #dd4814;
 }
 
 .wp-pagenavi span.current {
 	font-weight: bold;
 }
+
 #gotopbtn {
 	width:49px;
 	height:64px;
