@@ -334,14 +334,12 @@ endif;
 function luckid_search_form( $form ) {
 
     $form = '<form role="search" method="get" id="searchform" action="' . home_url( '/' ) . '" >
-    <div>
+    <ul><li>
     <input type="text" value="' . get_search_query() . '" name="s" id="s" />
     <input type="submit" id="searchsubmit" value="'. esc_attr__('Search') .'" />
-    </div>
+    </li></ul>
     </form>';
 
     return $form;
 }
 add_filter( 'get_search_form', 'luckid_search_form' );
-
-
