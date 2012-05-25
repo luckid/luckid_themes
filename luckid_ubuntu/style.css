@@ -659,7 +659,7 @@ h3#reply-title {
 }
 .navigation a:link,
 .navigation a:visited {
-	color: #888;
+	color: #dd4814;
 	text-decoration: none;
 }
 .navigation a:active,
@@ -820,3 +820,5 @@ text-align: center;
 
 	z-index:99;
 }
+blockquote {background: #dcdcdc; margin: 0px 25px 15px 25px; padding: 0px 25px 0px 10px; border: 2px solid #c8c8c8;}
+#content blockquote p {margin: 0px; padding: 10px 0px 10px 0px;}
