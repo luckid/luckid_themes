@@ -199,12 +199,7 @@ margin: 0;
 	width: 680px;
 	float: left;
 }
-#primary
-{
-	margin: 20px 10px 0 0;
-	width: 270px;
-	float: right;
-}
+
 .post
 {
 	background: #fff;
@@ -249,6 +244,9 @@ margin: 0;
 	max-height: 56px;
 	padding-top: 4px;
 }
+.post_time{float:left;margin-bottom:4px;}
+.post_comments{float:right;margin-bottom:4px;}
+.post_comments a:link, .comments_num a:visited{color:#555;text-shadow:1px 1px #eee;}
 
 .post .entry-content
 {
@@ -277,6 +275,13 @@ margin: 0;
 .post .entry-utility .cat-links a
 {
 	color: #000;
+}
+
+#primary
+{
+	margin: 20px 10px 0 0;
+	width: 270px;
+	float: right;
 }
 
 .xoxo
@@ -694,6 +699,16 @@ h3#reply-title {
 
 /* =WordPress Core
 -------------------------------------------------------------- */
+blockquote {
+    background: #dcdcdc;
+    margin: 0px 25px 15px 25px; 
+    padding: 0px 25px 0px 10px; 
+    border: 2px solid #c8c8c8;
+}
+#content blockquote p {
+    margin: 0px; 
+    padding: 10px 0px 10px 0px;
+}
 .alignnone {
     margin: 5px 20px 20px 0;
 }
@@ -820,5 +835,4 @@ text-align: center;
 
 	z-index:99;
 }
-blockquote {background: #dcdcdc; margin: 0px 25px 15px 25px; padding: 0px 25px 0px 10px; border: 2px solid #c8c8c8;}
-#content blockquote p {margin: 0px; padding: 10px 0px 10px 0px;}
+

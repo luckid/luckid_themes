@@ -5,71 +5,61 @@
 
 get_header(); ?>
 
-		<div id="container">
-			<div id="content">
-				
-					<?php if (have_posts()) : ?>
-						<?php while (have_posts()) : the_post(); ?>
+    <div id="container">
+	<div id="content">				
+	    <?php if (have_posts()) : ?>
+		<?php while (have_posts()) : the_post(); ?>
 	
-							<div class="post">	
+		    <div class="post">
+		    									
+			<div class=postHeader>
+			    <h2 class="entry-title">
+				<a href="<?php echo get_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
+				    <?php the_title(); ?>
+				</a>																		
+			    </h2>
+			    
+		        <div class="post_time"><?php the_time('Y年n月j日'); ?></div>
+		        <div class="post_comments"><?php comments_popup_link ('抢沙发','1条评论','%条评论'); ?></div>
+		        <div class="clearBoth"></div>
+		    </div><!--end postHeader -->
+		    
+		    <div class="entry-content">
+			<?php the_content(); ?>
+		    </div>
 								
-								<div class=postHeader>
-									<h2 class="entry-title">
-									<a href="<?php echo get_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
-									<?php the_title(); ?>
-									</a>
-									
-									
-									<p><?php the_time('Y年n月j日'); ?></p>
-									
-									
-									</h2>			
-								</div>
-								
-								<div class="entry-content">
-								  <?php the_content(); ?>
-								</div>
-								
-								<div class="entry-utility">
-									<span class="cat-links">
-										
-										<p class="post_meta">	
-										<?php the_tags('Tagged as: ', ' , ' , ''); ?>
-										</p>
-									</span>
-								</div>
-								<div class="clear"></div>
+		    <div class="entry-utility">
+			<span class="cat-links">										
+			    <p class="post_meta">	
+				<?php the_tags('Tagged as: ', ' , ' , ''); ?>
+			    </p>
+			</span>
+		    </div><!-- end entry-utility -->
+		    <div class="clear"></div><!-- clear entry-utility -->
 		
-							</div><!-- end post -->
+		</div><!-- end post -->
 		
-					<?php endwhile; ?>
-					<?php else : ?>
+	    <?php endwhile; ?>
+	<?php else : ?>
 
-							<div class="post">
-		
-								<p>Sorry, there were no posts found.</p>
-		
-							</div><!-- end post -->
+	    <div class="post">		
+		<p>Sorry, there were no posts found.</p>		
+	    </div><!-- end post -->
 
-					<?php endif; ?>
-
-
+	<?php endif; ?>
 			
-			</div><!-- #content -->
+        </div><!-- #content -->
 			
-<?php if ( function_exists ( 'wp_pagenavi' ) ) { wp_pagenavi ( ) ; } else { ?> 
-  
-<div class="nav-previous"> 
-<?php next_posts_link ( '&larr; Previous Entries' ) ?> 
-</div> 
-<div class="nav-next"> 
-<?php previous_posts_link ( 'Next Entries &rarr;' ) ?> 
-</div> 
-  
-<?php } ?> 
+        <?php if ( function_exists ( 'wp_pagenavi' ) ) { wp_pagenavi ( ) ; } else { ?>   
+            <div class="nav-previous"> 
+                <?php next_posts_link ( '&larr; Previous Entries' ) ?> 
+            </div> 
+            <div class="nav-next"> 
+	        <?php previous_posts_link ( 'Next Entries &rarr;' ) ?> 
+	    </div>   
+	<?php } ?> 
 
-
-		</div><!-- #container -->
+    </div><!-- #container -->
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
