@@ -26,15 +26,7 @@ get_header(); ?>
 			<div class="entry-content">
 			    <?php the_content(); ?>
 			</div>
-								
-			<div class="entry-utility">
-			    <span class="cat-links">										
-				<p class="post_meta">	
-				    <?php the_tags('Tagged as: ', ' , ' , ''); ?>
-				</p>
-			    </span>
-			</div><!-- end entry-utility -->
-			<div class="clear"></div>
+
 						
 								
 			<div id="nav-below" class="navigation">
