@@ -247,7 +247,7 @@ margin: 0;
 }
 .post_time{float:left;margin-bottom:4px;}
 .post_comments{float:right;margin-bottom:4px;}
-.post_comments a:link, .comments_num a:visited{color:#555;text-shadow:1px 1px #eee;}
+.post_comments a:link, .post_comments a:visited{color:#000;text-shadow:1px 1px #eee;}
 
 .post .entry-content
 {
