@@ -29,11 +29,10 @@ get_header(); ?>
 		    </div>
 								
 		    <div class="entry-utility">
-			<span class="cat-links">										
-			    <p class="post_meta">	
-				<?php the_tags('Tagged as: ', ' , ' , ''); ?>
-			    </p>
-			</span>
+	
+				<?php the_tags('Tagged as: ', ' , ' , ''); ?> | 
+			        <a href="<?php the_permalink() ?>" title="详细阅读 <?php the_title(); ?>" rel="bookmark">阅读全文 &rarr;</a>	|			
+
 		    </div><!-- end entry-utility -->
 		    <div class="clear"></div><!-- clear entry-utility -->
 		

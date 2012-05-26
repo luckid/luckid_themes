@@ -28,22 +28,23 @@ get_header(); ?>
 									<a href="<?php echo get_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
 									<?php the_title(); ?>
 									</a>			
-									<p><?php the_time('Y年n月j日'); ?></p>
-									</h2>			
+									</h2>	
+		     							<div class="post_time"><?php the_time('Y年n月j日'); ?></div>
+		        						<div class="post_comments"><?php comments_popup_link ('抢沙发','1条评论','%条评论'); ?></div>
+		        						<div class="clearBoth"></div>											
 								</div>
 								
 								<div class="entry-content">
 								  <?php the_content(); ?>
 								</div>
 								
-								<div class="entry-utility">
-									<span class="cat-links">									
-										<p class="post_meta">	
-										<?php the_tags('Tagged as: ', ' , ' , ''); ?>
-										</p>
-									</span>
-								</div>
-								<div class="clear"></div>
+		    <div class="entry-utility">
+	
+				<?php the_tags('Tagged as: ', ' , ' , ''); ?> | 
+			        <a href="<?php the_permalink() ?>" title="详细阅读 <?php the_title(); ?>" rel="bookmark">阅读全文 &rarr;</a>	|			
+
+		    </div><!-- end entry-utility -->
+		    <div class="clear"></div><!-- clear entry-utility -->
 		
 							</div><!-- end post -->
 				<?php endwhile; ?>
