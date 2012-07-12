@@ -37,23 +37,11 @@
 
 	wp_footer();
 ?>
-<div id="gotopbtn"></div>
-<script type="text/javascript">
-backTop=function (btnId){
-	var btn=document.getElementById(btnId);
-	var d=document.documentElement;
-	window.onscroll=set;
-	btn.onclick=function (){
-		btn.style.display="none";
-		window.onscroll=null;
-		this.timer=setInterval(function(){
-			d.scrollTop-=Math.ceil(d.scrollTop*0.1);
-			if(d.scrollTop==0) clearInterval(btn.timer,window.onscroll=set);
-		},10);
-	};
-	function set(){btn.style.display=d.scrollTop?'block':"none"}
-};
-backTop('gotopbtn');
-</script>
-</body>
+
+<div class="go">
+	<a title="到顶部" class="top" href="#top">至顶</a>
+	<a title="到底部" class="bottom" href="#bottom">至底</a>
+</div>
+
+<a name="top" id="bottom"></a></body>
 </html>

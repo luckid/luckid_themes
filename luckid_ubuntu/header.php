@@ -47,7 +47,7 @@
 ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?>><a name="top" id="top"></a>
 <div id="wrapper" class="hfeed">
 	<div id="header">
 		<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>
